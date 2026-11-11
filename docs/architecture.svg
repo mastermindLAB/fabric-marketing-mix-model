@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1 1L9 5L1 9z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1200" fill="#F5F3FF"/>
+
+  <!-- Title band -->
+  <rect width="1600" height="150" fill="#1E1B4B"/>
+  <rect y="150" width="267" height="8" fill="#7B2FF7"/><rect x="267" y="150" width="267" height="8" fill="#F72585"/>
+  <rect x="534" y="150" width="267" height="8" fill="#00B4D8"/><rect x="801" y="150" width="267" height="8" fill="#06D6A0"/>
+  <rect x="1068" y="150" width="266" height="8" fill="#FFB703"/><rect x="1334" y="150" width="266" height="8" fill="#FB5607"/>
+  <text x="60" y="72" font-size="40" font-weight="700" fill="#FFFFFF">Marketing Mix Modelling + Campaign ML on Microsoft Fabric</text>
+  <text x="60" y="116" font-size="22" fill="#C7D2FE">End to end: OneLake Lakehouse, Spark, Fabric Warehouse, Direct Lake and Power BI, deployed entirely through REST APIs</text>
+
+  <!-- Stats strip -->
+  <g font-size="19" text-anchor="middle">
+    <rect x="60" y="182" width="282" height="74" rx="14" fill="#FFFFFF" stroke="#4361EE" stroke-width="2"/>
+    <text x="201" y="215" font-size="28" font-weight="700" fill="#4361EE">0.63%</text><text x="201" y="243" fill="#475569">holdout error (MAPE)</text>
+    <rect x="358" y="182" width="282" height="74" rx="14" fill="#FFFFFF" stroke="#06D6A0" stroke-width="2"/>
+    <text x="499" y="215" font-size="28" font-weight="700" fill="#059669">10 / 10</text><text x="499" y="243" fill="#475569">issues found, 0 false alarms</text>
+    <rect x="656" y="182" width="282" height="74" rx="14" fill="#FFFFFF" stroke="#7B2FF7" stroke-width="2"/>
+    <text x="797" y="215" font-size="28" font-weight="700" fill="#7B2FF7">95</text><text x="797" y="243" fill="#475569">reconciliation checks</text>
+    <rect x="954" y="182" width="282" height="74" rx="14" fill="#FFFFFF" stroke="#F72585" stroke-width="2"/>
+    <text x="1095" y="215" font-size="28" font-weight="700" fill="#F72585">28 / 15</text><text x="1095" y="243" fill="#475569">campaigns / platforms</text>
+    <rect x="1252" y="182" width="288" height="74" rx="14" fill="#FFFFFF" stroke="#FB5607" stroke-width="2"/>
+    <text x="1396" y="215" font-size="28" font-weight="700" fill="#FB5607">+6.4%</text><text x="1396" y="243" fill="#475569">media revenue, same budget</text>
+  </g>
+
+  <!-- Column headers -->
+  <g font-size="17" font-weight="700" fill="#64748B" letter-spacing="1.5">
+    <text x="60" y="300">SOURCES</text><text x="300" y="300">LAKEHOUSE  (lh_marketing)</text>
+    <text x="700" y="300">MODELS  (Spark)</text><text x="1010" y="300">WAREHOUSE  (Gold)</text>
+    <text x="1340" y="300">SERVE</text>
+  </g>
+
+  <!-- Sources -->
+  <g font-size="17">
+    <rect x="60" y="320" width="200" height="104" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="78" y="350" font-weight="700" fill="#1F2937">Media spend</text>
+    <text x="78" y="376" fill="#475569">152,880 daily rows</text><text x="78" y="400" fill="#475569">28 campaigns</text>
+    <rect x="60" y="440" width="200" height="80" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="78" y="470" font-weight="700" fill="#1F2937">Sales</text><text x="78" y="496" fill="#475569">5 regions, 3 products</text>
+    <rect x="60" y="536" width="200" height="80" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="78" y="566" font-weight="700" fill="#1F2937">Calendar</text><text x="78" y="592" fill="#475569">holidays, promotions</text>
+    <rect x="60" y="632" width="200" height="80" rx="12" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="78" y="662" font-weight="700" fill="#1F2937">Campaign master</text><text x="78" y="688" fill="#475569">platform, objective</text>
+  </g>
+
+  <!-- Lakehouse container -->
+  <rect x="290" y="316" width="370" height="400" rx="20" fill="#E0F7F4" stroke="#14B8A6" stroke-width="2"/>
+  <g font-size="17">
+    <rect x="312" y="336" width="326" height="96" rx="12" fill="#FFFFFF" stroke="#14B8A6"/>
+    <text x="330" y="366" font-weight="700" fill="#0F766E">1  Bronze (Delta)</text>
+    <text x="330" y="392" fill="#475569">Raw fidelity, row hash, run_id</text><text x="330" y="416" fill="#475569">File lines = rows loaded</text>
+    <rect x="312" y="452" width="326" height="120" rx="12" fill="#FFFFFF" stroke="#14B8A6"/>
+    <text x="330" y="482" font-weight="700" fill="#0F766E">2  Silver star schema</text>
+    <text x="330" y="508" fill="#475569">19 data quality rules</text><text x="330" y="532" fill="#475569">Critical rows to quarantine</text>
+    <text x="330" y="556" fill="#475569">Bronze = Silver + quarantine</text>
+    <rect x="312" y="592" width="326" height="100" rx="12" fill="#FFF1F2" stroke="#F72585"/>
+    <text x="330" y="622" font-weight="700" fill="#BE185D">Quarantine + exceptions</text>
+    <text x="330" y="648" fill="#475569">Bad rows held, never dropped</text><text x="330" y="672" fill="#475569">Every rule hit logged with raw value</text>
+  </g>
+
+  <!-- Models -->
+  <g font-size="17">
+    <rect x="690" y="320" width="290" height="190" rx="12" fill="#FFFFFF" stroke="#7B2FF7" stroke-width="2"/>
+    <text x="708" y="350" font-weight="700" fill="#6D28D9">3  Marketing mix model</text>
+    <text x="708" y="378" fill="#475569">Adstock carryover</text><text x="708" y="402" fill="#475569">Hill saturation curves</text>
+    <text x="708" y="426" fill="#475569">Bounded regression</text>
+    <text x="708" y="450" fill="#475569">12-week holdout test</text>
+    <text x="708" y="474" fill="#475569">ROI and response curves</text>
+    <text x="708" y="498" fill="#475569">Budget optimizer, +/-30%</text>
+    <rect x="690" y="526" width="290" height="190" rx="12" fill="#FFFFFF" stroke="#06D6A0" stroke-width="2"/>
+    <text x="708" y="556" font-weight="700" fill="#047857">4  Campaign ML</text>
+    <text x="708" y="584" fill="#475569">Theil-Sen trends + FDR control</text><text x="708" y="608" fill="#475569">BIC changepoint detection</text>
+    <text x="708" y="632" fill="#475569">KMeans campaign segments</text><text x="708" y="656" fill="#475569">Peer benchmarks per channel</text>
+    <text x="708" y="680" fill="#475569">Actions with data evidence</text>
+  </g>
+
+  <!-- Warehouse container -->
+  <rect x="1000" y="316" width="320" height="400" rx="20" fill="#FFF7E6" stroke="#F59E0B" stroke-width="2"/>
+  <g font-size="17">
+    <rect x="1020" y="336" width="280" height="120" rx="12" fill="#FFFFFF" stroke="#F59E0B"/>
+    <text x="1038" y="366" font-weight="700" fill="#B45309">5  Gold (T-SQL)</text>
+    <text x="1038" y="392" fill="#475569">Weekly facts, YoY trends</text><text x="1038" y="416" fill="#475569">Decomposition, ROI, scenarios</text>
+    <text x="1038" y="440" fill="#475569">Campaign recommendations</text>
+    <rect x="1020" y="472" width="280" height="110" rx="12" fill="#FFFFFF" stroke="#F59E0B"/>
+    <text x="1038" y="502" font-weight="700" fill="#B45309">ops.usp_reconcile</text>
+    <text x="1038" y="528" fill="#475569">95 checks across layers</text><text x="1038" y="552" fill="#475569">Model accuracy gate (MAPE)</text>
+    <rect x="1020" y="598" width="280" height="94" rx="12" fill="#FFFFFF" stroke="#F59E0B"/>
+    <text x="1038" y="628" font-weight="700" fill="#B45309">Audit and alerts</text>
+    <text x="1038" y="654" fill="#475569">Run log, alert log</text><text x="1038" y="678" fill="#475569">usp_trace_week for RCA</text>
+  </g>
+
+  <!-- Serve -->
+  <g font-size="17">
+    <rect x="1340" y="320" width="200" height="120" rx="12" fill="#FFFFFF" stroke="#4361EE" stroke-width="2"/>
+    <text x="1358" y="350" font-weight="700" fill="#3730A3">6  Semantic model</text>
+    <text x="1358" y="376" fill="#475569">Direct Lake</text><text x="1358" y="400" fill="#475569">ROAS, CPA, CTR,</text>
+    <text x="1358" y="424" fill="#475569">CPM, YoY, uplift</text>
+    <rect x="1340" y="456" width="200" height="260" rx="12" fill="#1E1B4B"/>
+    <text x="1358" y="486" font-weight="700" fill="#FFFFFF">7  Power BI report</text>
+    <g fill="#C7D2FE" font-size="16">
+      <text x="1358" y="514">Overview</text><text x="1358" y="536">Sales decomposition</text><text x="1358" y="558">Channel ROI</text>
+      <text x="1358" y="580">Platform + funnel KPIs</text><text x="1358" y="602">Campaign insights (ML)</text>
+      <text x="1358" y="624">Response curves</text><text x="1358" y="646">Budget optimizer</text><text x="1358" y="668">Regional trends</text>
+      <text x="1358" y="690">Model fit, data quality</text>
+    </g>
+  </g>
+
+  <!-- Flow arrows -->
+  <g stroke="#64748B" stroke-width="2.5" fill="none" marker-end="url(#a)">
+    <path d="M260 372 H308"/><path d="M260 480 H286"/><path d="M260 576 H286"/><path d="M260 672 H286"/>
+    <path d="M475 432 V448"/><path d="M475 572 V588"/>
+    <path d="M638 500 H686"/><path d="M638 520 C660 520 660 620 686 620"/>
+    <path d="M980 415 H1016"/><path d="M980 620 C995 620 995 420 1016 420"/>
+    <path d="M1160 456 V468"/><path d="M1160 582 V594"/>
+    <path d="M1300 390 H1336"/><path d="M1440 440 V452"/>
+  </g>
+
+  <!-- Orchestration band -->
+  <rect x="60" y="746" width="1480" height="120" rx="18" fill="#FFFFFF" stroke="#7B2FF7" stroke-width="2"/>
+  <text x="84" y="782" font-size="20" font-weight="700" fill="#6D28D9">Fabric Data Pipeline: pl_marketing_mix_weekly</text>
+  <g font-size="17" fill="#1F2937">
+    <rect x="84" y="800" width="160" height="46" rx="23" fill="#EDE9FE"/><text x="164" y="829" text-anchor="middle">Bronze</text>
+    <rect x="270" y="800" width="160" height="46" rx="23" fill="#EDE9FE"/><text x="350" y="829" text-anchor="middle">Silver</text>
+    <rect x="456" y="800" width="160" height="46" rx="23" fill="#EDE9FE"/><text x="536" y="829" text-anchor="middle">MMM fit</text>
+    <rect x="642" y="800" width="180" height="46" rx="23" fill="#EDE9FE"/><text x="732" y="829" text-anchor="middle">Campaign ML</text>
+    <rect x="848" y="800" width="200" height="46" rx="23" fill="#EDE9FE"/><text x="948" y="829" text-anchor="middle">SQL endpoint sync</text>
+    <rect x="1074" y="800" width="220" height="46" rx="23" fill="#EDE9FE"/><text x="1184" y="829" text-anchor="middle">Gold + reconcile</text>
+    <rect x="1320" y="800" width="196" height="46" rx="23" fill="#FFE4E6"/><text x="1418" y="829" text-anchor="middle">If ALERT: notify</text>
+  </g>
+  <g stroke="#7B2FF7" stroke-width="2" marker-end="url(#a)"><path d="M244 823 H266"/><path d="M430 823 H452"/><path d="M616 823 H638"/>
+    <path d="M822 823 H844"/><path d="M1048 823 H1070"/><path d="M1294 823 H1316"/></g>
+
+  <!-- Principles band -->
+  <g font-size="17">
+    <rect x="60" y="890" width="355" height="236" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="80" y="924" font-size="19" font-weight="700" fill="#1F2937">Trustworthy data</text>
+    <text x="80" y="956" fill="#475569">One run_id across every layer</text><text x="80" y="982" fill="#475569">Bad data quarantined and alerted,</text>
+    <text x="80" y="1006" fill="#475569">never silently dropped</text><text x="80" y="1032" fill="#475569">Only infrastructure errors fail</text>
+    <text x="80" y="1056" fill="#475569">the pipeline</text>
+    <rect x="435" y="890" width="355" height="236" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="455" y="924" font-size="19" font-weight="700" fill="#1F2937">Validated models</text>
+    <text x="455" y="956" fill="#475569">Synthetic data with known truth</text><text x="455" y="982" fill="#475569">Geo-holdout tests separate</text>
+    <text x="455" y="1006" fill="#475569">always-on channels</text><text x="455" y="1032" fill="#475569">Recovered ROI and planted issues</text>
+    <text x="455" y="1056" fill="#475569">scored against the truth</text>
+    <rect x="810" y="890" width="355" height="236" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="830" y="924" font-size="19" font-weight="700" fill="#1F2937">Honest attribution</text>
+    <text x="830" y="956" fill="#475569">MMM decides budget across channels</text><text x="830" y="982" fill="#475569">Platform KPIs rank campaigns</text>
+    <text x="830" y="1006" fill="#475569">within a channel</text><text x="830" y="1032" fill="#475569">Platform-reported vs incremental</text>
+    <text x="830" y="1056" fill="#475569">ROAS shown side by side</text>
+    <rect x="1185" y="890" width="355" height="236" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="1205" y="924" font-size="19" font-weight="700" fill="#1F2937">Everything as code</text>
+    <text x="1205" y="956" fill="#475569">Workspace, notebooks, pipeline,</text><text x="1205" y="982" fill="#475569">TMDL model and PBIR report</text>
+    <text x="1205" y="1006" fill="#475569">created via Fabric REST APIs</text><text x="1205" y="1032" fill="#475569">Rebuild with a handful of</text>
+    <text x="1205" y="1056" fill="#475569">Python scripts</text>
+  </g>
+  <text x="800" y="1170" font-size="17" fill="#64748B" text-anchor="middle">Python  |  PySpark  |  scikit-learn  |  SciPy  |  T-SQL  |  TMDL  |  PBIR  |  Microsoft Fabric  |  Power BI</text>
+</svg>

@@ -1,0 +1,117 @@
+{
+  "planted": [
+    {
+      "campaign": "CTV Retargeting",
+      "platform": "Connected TV",
+      "channel": "TV",
+      "issue": "cpm_inflation",
+      "expected_reason": "COST_INFLATION",
+      "weeks": [
+        60,
+        155
+      ]
+    },
+    {
+      "campaign": "Search Non-brand Generic",
+      "platform": "Google Ads",
+      "channel": "Paid Search",
+      "issue": "cpm_inflation",
+      "expected_reason": "COST_INFLATION",
+      "weeks": [
+        52,
+        155
+      ]
+    },
+    {
+      "campaign": "Search Competitor Terms",
+      "platform": "Google Ads",
+      "channel": "Paid Search",
+      "issue": "bad_inventory",
+      "expected_reason": "LOW_QUALITY_TRAFFIC",
+      "weeks": null
+    },
+    {
+      "campaign": "Meta Retargeting Cart",
+      "platform": "Meta",
+      "channel": "Social",
+      "issue": "saturation",
+      "expected_reason": "DIMINISHING_RETURNS",
+      "weeks": [
+        40,
+        155
+      ]
+    },
+    {
+      "campaign": "Meta Advantage+ Shopping",
+      "platform": "Meta",
+      "channel": "Social",
+      "issue": "underfunded_winner",
+      "expected_reason": "UNDERFUNDED_WINNER",
+      "weeks": null
+    },
+    {
+      "campaign": "TikTok Spring Creators",
+      "platform": "TikTok",
+      "channel": "Social",
+      "issue": "creative_fatigue",
+      "expected_reason": "CTR_DECLINING",
+      "weeks": [
+        20,
+        155
+      ]
+    },
+    {
+      "campaign": "YouTube Product Demo",
+      "platform": "YouTube",
+      "channel": "Social",
+      "issue": "step_up",
+      "expected_reason": "IMPROVED_AFTER_CHANGE",
+      "weeks": [
+        80,
+        155
+      ]
+    },
+    {
+      "campaign": "TTD Open Exchange Reach",
+      "platform": "The Trade Desk",
+      "channel": "Display",
+      "issue": "bad_inventory",
+      "expected_reason": "LOW_QUALITY_TRAFFIC",
+      "weeks": null
+    },
+    {
+      "campaign": "DV360 Prospecting",
+      "platform": "DV360",
+      "channel": "Display",
+      "issue": "step_down",
+      "expected_reason": "CVR_DROP_CHANGEPOINT",
+      "weeks": [
+        100,
+        155
+      ]
+    },
+    {
+      "campaign": "Amazon Retail Retargeting",
+      "platform": "Amazon DSP",
+      "channel": "Display",
+      "issue": "underfunded_winner",
+      "expected_reason": "UNDERFUNDED_WINNER",
+      "weeks": null
+    }
+  ],
+  "healthy_click_campaigns": [
+    "CTV Streaming Reach",
+    "Search Brand",
+    "Bing Brand",
+    "Bing Non-brand",
+    "Meta Prospecting Lookalike",
+    "TikTok Spark Ads",
+    "LinkedIn B2B Leads",
+    "YouTube Bumper Reach",
+    "TTD Curated PMP",
+    "DV360 Video",
+    "Amazon Audiences",
+    "Email Newsletter",
+    "Email Abandoned Cart"
+  ]
+}

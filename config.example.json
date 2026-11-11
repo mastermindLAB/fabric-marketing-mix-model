@@ -1,0 +1,13 @@
+{
+  "workspace_id": "<workspace_id>",
+  "workspace_name": "marketing-mix-analytics",
+  "capacity_id": "<capacity_id>",
+  "lakehouse_id": "<lakehouse_id>",
+  "lakehouse_name": "lh_marketing",
+  "sql_endpoint_id": "<sql_endpoint_id>",
+  "warehouse_id": "<warehouse_id>",
+  "warehouse_name": "wh_marketing_gold",
+  "warehouse_server": "<warehouse_server>",
+  "lakehouse_abfss": "<lakehouse_abfss>",
+  "alert_recipient": "alerts@example.com"
+}

@@ -1,0 +1,88 @@
+{
+  "geo_holdouts": {
+    "Central|Paid Search": [
+      60,
+      68
+    ],
+    "South|Email": [
+      90,
+      98
+    ],
+    "West|Social": [
+      110,
+      118
+    ],
+    "East|Display": [
+      30,
+      38
+    ]
+  },
+  "weeks": 156,
+  "start": "2023-01-02",
+  "regions": {
+    "North": 1.25,
+    "South": 0.95,
+    "East": 1.1,
+    "West": 1.0,
+    "Central": 0.7
+  },
+  "seed": 20261108,
+  "total_revenue": 327671386.45000005,
+  "total_spend": 51401221.98,
+  "channels": {
+    "TV": {
+      "decay": 0.6,
+      "hill_shape": 2.0,
+      "half_saturation": 1.1,
+      "beta": 87722.94274764784,
+      "target_roi": 1.6,
+      "true_contribution_weekly_model": 28612634.24437498,
+      "daily_file_spend": 17882896.39
+    },
+    "Paid Search": {
+      "decay": 0.1,
+      "hill_shape": 1.2,
+      "half_saturation": 1.4,
+      "beta": 129572.15508008433,
+      "target_roi": 3.2,
+      "true_contribution_weekly_model": 39139769.218383715,
+      "daily_file_spend": 12231178.13
+    },
+    "Social": {
+      "decay": 0.3,
+      "hill_shape": 1.5,
+      "half_saturation": 1.2,
+      "beta": 66425.24855255992,
+      "target_roi": 2.4,
+      "true_contribution_weekly_model": 21296420.45829163,
+      "daily_file_spend": 8873508.67
+    },
+    "Display": {
+      "decay": 0.2,
+      "hill_shape": 1.3,
+      "half_saturation": 1.0,
+      "beta": 16242.177948243494,
+      "target_roi": 0.9,
+      "true_contribution_weekly_model": 5678766.526926624,
+      "daily_file_spend": 6309740.65
+    },
+    "OOH": {
+      "decay": 0.5,
+      "hill_shape": 2.2,
+      "half_saturation": 1.0,
+      "beta": 15880.709596680315,
+      "target_roi": 1.1,
+      "true_contribution_weekly_model": 5069628.808893779,
+      "daily_file_spend": 4608753.61
+    },
+    "Email": {
+      "decay": 0.05,
+      "hill_shape": 1.0,
+      "half_saturation": 1.5,
+      "beta": 22113.83709635221,
+      "target_roi": 4.5,
+      "true_contribution_weekly_model": 6728149.759129409,
+      "daily_file_spend": 1495144.53
+    }
+  }
+}

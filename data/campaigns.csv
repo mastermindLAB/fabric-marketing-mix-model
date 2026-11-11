@@ -1,0 +1,29 @@
+campaign,platform,channel,objective
+TV Brand Always-on,Linear TV,TV,Awareness
+TV Holiday Burst,Linear TV,TV,Awareness
+CTV Streaming Reach,Connected TV,TV,Awareness
+CTV Retargeting,Connected TV,TV,Consideration
+Billboards City Centre,Billboards,OOH,Awareness
+Transit Commuter,Transit,OOH,Awareness
+DOOH Shopping Malls,Digital OOH,OOH,Awareness
+Search Brand,Google Ads,Paid Search,Brand search
+Search Non-brand Generic,Google Ads,Paid Search,Non-brand search
+Search Competitor Terms,Google Ads,Paid Search,Conquest
+Bing Brand,Microsoft Ads,Paid Search,Brand search
+Bing Non-brand,Microsoft Ads,Paid Search,Non-brand search
+Meta Prospecting Lookalike,Meta,Social,Prospecting
+Meta Retargeting Cart,Meta,Social,Retargeting
+Meta Advantage+ Shopping,Meta,Social,Conversion
+TikTok Spring Creators,TikTok,Social,Prospecting
+TikTok Spark Ads,TikTok,Social,Prospecting
+LinkedIn B2B Leads,LinkedIn,Social,Lead generation
+YouTube Product Demo,YouTube,Social,Consideration
+YouTube Bumper Reach,YouTube,Social,Awareness
+TTD Open Exchange Reach,The Trade Desk,Display,Prospecting
+TTD Curated PMP,The Trade Desk,Display,Prospecting
+DV360 Prospecting,DV360,Display,Prospecting
+DV360 Video,DV360,Display,Consideration
+Amazon Retail Retargeting,Amazon DSP,Display,Retargeting
+Amazon Audiences,Amazon DSP,Display,Prospecting
+Email Newsletter,Klaviyo,Email,Retention
+Email Abandoned Cart,Klaviyo,Email,Retargeting
